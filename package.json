@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test_dev":"cross-env ENV_NAME=dev npx playwright test",
-    "test_demo":"cross-env ENV_NAME=demo npx playwright test",
-    "test_demo_chrome_hd":"cross-env ENV_NAME=demo npx playwright test --project=chromium --headed",
-    "test_demo_firefox_hd":"cross-env ENV_NAME=demo npx playwright test --project=firefox --headed"
+    "test_dev": "cross-env ENV_NAME=dev npx playwright test",
+    "test_demo": "cross-env ENV_NAME=demo npx playwright test",
+    "test_demo_chrome_hd": "cross-env ENV_NAME=demo npx playwright test --project=chromium --headed",
+    "test_demo_chrome_hl": "cross-env ENV_NAME=demo npx playwright test --project=chromium",
+    "test_demo_firefox_hl": "cross-env ENV_NAME=demo npx playwright test --project=firefox",
+    "test_demo_firefox_hd": "cross-env ENV_NAME=demo npx playwright test --project=firefox --headed"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,7 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "crypto-js": "^4.2.0",
     "dotenv": "^16.5.0"
   }
 }
