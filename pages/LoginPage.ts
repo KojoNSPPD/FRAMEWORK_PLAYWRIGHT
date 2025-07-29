@@ -5,6 +5,7 @@ export class LoginPage{
     readonly userNameInput:Locator;
     readonly passwordInput:Locator;
     readonly loginButton:Locator;
+    readonly invalidCredentialsError: Locator;
     
     // Constructor to initialize the page and locators
     constructor(page: Page) {
@@ -12,6 +13,7 @@ export class LoginPage{
         this.userNameInput = page.getByRole('textbox',{ name:'Username' });
         this.passwordInput = page.getByRole('textbox',{ name:'Password'});
         this.loginButton = page.getByRole("button", { name: "Login" });
+        this.invalidCredentialsError = page.getByRole('alert', { name: 'Invalid credentials' });
     }
     
     // Methods to interact with the page

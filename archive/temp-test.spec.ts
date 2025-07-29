@@ -13,7 +13,7 @@ test.beforeEach('before each hook',async ({ loginPage }) => {
 })
 
 test.afterEach('after each hook',async ({userPage }) => {
-    await userPage.logout();
+   // await userPage.logout();
 })
 
 
@@ -48,14 +48,14 @@ test("Temp Test 1", async ({ page, loginPage, commonUtils }) => {
 
 });
 
-test.only("Temp Test 2", async ({ page, loginPage }) => {
+test("Temp Test 2", async ({ page, loginPage, }) => {
     
     await expect(page).toHaveTitle('OrangeHRM');
-    await page.pause();
+    //await page.pause();
 
 })
 
-test("Temp Test 3", async ({ page, loginPage }) => {
+test("Temp Test 3", async ({ page, loginPage, }) => {
     
     await expect(page).toHaveTitle('OrangeHRM');
 
